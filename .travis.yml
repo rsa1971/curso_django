@@ -2,6 +2,9 @@ language: python
 pyhton:
   - 3.8
 install:
-  - pip -r requirements-dev.txt
+  - pip -r requirements-dev.txt codecov
 scripts:
   - flake8
+  - pytest curso_django --cov=libpythonpro
+after sucess:
+  - codecov
