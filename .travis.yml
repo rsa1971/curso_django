@@ -1,10 +1,19 @@
 language: python
+
 pyhton:
   - 3.8
+
+env:
+  global:
+    - PIPENV_VENV_IN_PROJECT=1
+    - PIPENV_IGNORE_VIRTUALENVS=1
+
 install:
- # - pip -r requirements-dev.txt codecov
+  - pip install pipenv
+  - pipenv sync -d
+
 scripts:
-# - flake8
-# - pytest curso_django --cov=curso_django
+  - pipenv run flake8
+
 after sucess:
   - codecov
