@@ -22,7 +22,9 @@ source .venv/bin/activate
 
 .venv/Scripts/activate no W10
 
-pip install -r requirements-dev.txt
+pipenv shell para ativar
+
+exit para sair
 
 '''
 
